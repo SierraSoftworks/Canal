@@ -65,7 +65,7 @@ Canal.options = {
 	registrar: Canal.Express.registrar,
 	idenfifierPreprocessor: Canal.Express.identifierPreprocessor,
 	basePath: '/',
-	separator: '/'
+	pathSeparator: '/'
 };
 ```
 
