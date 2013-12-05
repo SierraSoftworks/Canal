@@ -1,6 +1,9 @@
 # Canal
 **A structured routing toolkit for Express**
 
+[![Build Status](https://travis-ci.org/SierraSoftworks/Canal.png?branch=master)](https://travis-ci.org/SierraSoftworks/Canal)
+[![](https://badge.fury.io/js/canal.png)](https://npmjs.org/package/canal)
+
 Canal was designed to make structuring routes in Express as easy as possible by relying on JavaScript objects to design your routes. It allows you to easily manage complex routing strategies while ensuring that the code remains readable and navigatable.
 
 ## Usage
