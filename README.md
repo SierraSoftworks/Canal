@@ -117,3 +117,24 @@ var routes = {
 ```
 
 Cascading handlers are applied to all child routes when they appear with an Object as the last element, while they are implemented only for the given handler if the last element in the array is a function.
+
+## Customization
+By default, Canal comes with support for Express out of the box, but it has been designed to allow you to easily modify its behaviour to work with different frameworks. The core of Canal's framework behaviour are the *identifierPreprocessor* and *registrar* methods in *Canal.options*. These methods are responsible for handling the conversion of placeholders into the syntax expected by the web framework, and registering new routes with the framework respectively.
+
+```javascript
+function Express_Registrar(app, verb, route, handlers) { 
+	var args = [route];
+	args.push(handlers);
+
+	if(!app[verb]) 
+		throw new Error('The requested routing verb "' + verb + '" wasn\'t available for the route "' + route + '"');
+
+	app[verb].apply(this, args);
+};
+
+function identifierPreprocessor(identifier) {
+	if(identifier[0] == '$')
+		return ':' + identifier.substr(1);
+	return identifier;
+}
+```
