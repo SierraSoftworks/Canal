@@ -59,7 +59,14 @@ app.listen(process.env.port || 3000);
 Canal's API consists of a single function which allows you to register routes with an application.
 
 ```javascript
-function Canal(app, routes, basePath = '/');
+function Canal(app, routes, options = Canal.options);
+
+Canal.options = {
+	registrar: Canal.Express.registrar,
+	idenfifierPreprocessor: Canal.Express.identifierPreprocessor,
+	basePath: '/',
+	separator: '/'
+};
 ```
 
 ### Routes Syntax
