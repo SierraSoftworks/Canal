@@ -1,0 +1,23 @@
+{
+	"name": "canal",
+	"version": "1.0.0",
+	"author": "Benjamin Pannell <admin@sierrasoftworks.com>",
+	"description": "A powerful route design helper for Express.js web applications",
+	"repository": "https://github.com/SierraSoftworks/Canal",
+	"licence": "MIT",
+	"website":"https://sierrasoftworks.com/canal",
+
+	"main": "./index",
+
+	"scripts": {
+		"test": "mocha --require should"
+	},
+
+	"dependencies": {
+		"lodash": "*"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"should": "*"
+	}
+}
