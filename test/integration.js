@@ -1,11 +1,7 @@
 var should = require('should'),
-	Canal = require('../index');
+	Canal = require('../');
 
 describe('integration', function() {
-	Canal.options.registrar = function(app, verb, path, handlers) {
-		app[verb].push({ path: path, handlers: handlers });
-	};
-
 	function newApp() {
 		return {
 			get: [],
@@ -35,7 +31,11 @@ describe('integration', function() {
 			]
 		};
 
-		Canal(app, routes);
+		Canal(app, routes, {
+			registrar: function(app, verb, path, handlers) {
+				app[verb].push({ path: path, handlers: handlers });
+			}
+		});
 		should.exist(app);
 		app.should.eql(expected);
 	});

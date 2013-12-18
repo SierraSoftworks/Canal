@@ -1,5 +1,5 @@
 var should = require('should'),
-	Canal = require('../index'),
+	Canal = require('../'),
 	compiler = require('../lib/Compiler.js');
 
 describe('Compiler', function() {
