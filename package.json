@@ -1,6 +1,6 @@
 {
 	"name": "canal",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"author": "Benjamin Pannell <admin@sierrasoftworks.com>",
 	"description": "A powerful route design helper for Express.js web applications",
 	"repository": "https://github.com/SierraSoftworks/Canal",
